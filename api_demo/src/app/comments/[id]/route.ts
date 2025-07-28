@@ -1,4 +1,5 @@
 import { comments } from "../data";
+// api to get the body data
 export async function GET(
   _request: Request,
   { params }: { params: { id: string } } // _request will avoid the error even if we dont use it
@@ -7,7 +8,7 @@ export async function GET(
   const comment = comments.find((comment) => comment.id === parseInt(id));
   return Response.json(comment);
 }
-
+// paatch or add or append
 export async function PATCH(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
@@ -21,7 +22,7 @@ export async function PATCH(
   comments[index].text = text;
   return Response.json(comments[index]);
 }
-
+// delete api
 export async function DELETE(
   request: Request,
   { params }: { params: { id: string } }
