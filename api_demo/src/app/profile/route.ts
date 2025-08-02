@@ -9,6 +9,6 @@ export async function GET(request: NextRequest) {
   cookieStore.set("resultPerpage", "20"); // method of sending the cookies
   console.log(cookieStore.get("resultPerpage"));
   return new Response(" THis is profile Api", {
-    headers: { "Content-Type": "text/html", "Set-Cookie": "Theme=Dark" },
+    headers: { "Content-Type": "text/html", "Set-Cookie": "Theme=Dar" },
   });
 }
